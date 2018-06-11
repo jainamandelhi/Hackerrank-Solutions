@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+   int n,temp,k,sum=0;
+    cin>>n;
+    vector<int>arr(n);
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+    sort(arr.begin(),arr.end());
+    while(arr[n-1]!=0)
+    {
+        sum=0;
+        for(int i=0;i<n;i++)
+        {
+            if (arr[i]!=0){
+                k=i;
+                break;}
+        }
+        temp=arr[k];
+        for(int i=k;i<n;i++)
+        {
+            arr[i]=arr[i]-temp;
+            sum++;
+        }
+        cout<<sum<<endl;
+    }
+}
