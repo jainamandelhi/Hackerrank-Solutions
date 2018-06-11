@@ -1,0 +1,52 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int i=0, n,sum=0,count=0,k,sum1;
+    string s;
+    cin>>n>>s;
+    vector<int>arr(n);
+    while(i!=n)
+    {
+        if (s[i]=='U')
+        {
+            arr[i]=1;
+        }
+        else
+        {
+            arr[i]=-1;
+        }
+        i++;
+    }
+    if(arr[0]==-1)
+    {
+        for(int j=0;j<n;j++)
+        {
+            sum1=sum;
+            k=j;
+            sum=sum+arr[j];
+           if(sum==0&&sum1<0)
+                count++;
+        }
+       
+    }
+    if (arr[0]==1)
+    {
+         for(int j=0;j<n;j++)
+        {
+             sum1=sum;
+             k=j;
+            sum+=arr[j];
+            if(sum==0&&sum1<0)
+                count++;
+        }
+    }
+    cout<<count;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
