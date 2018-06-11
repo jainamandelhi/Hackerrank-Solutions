@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(int n, int p){
+    int a;
+    if(n%2==0&&p==n-1&&(n/2-p)<0)
+    {
+        a=1;
+    }
+    else if((n/2-p)>=0)
+    {
+         a=(p/2);
+    }
+    else if((n/2-p)<0)
+    {
+        a=((n-p)/2);
+    }
+    return a;
+    // Complete this function
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int p;
+    cin >> p;
+    int result = solve(n, p);
+    cout << result << endl;
+    return 0;
+}
