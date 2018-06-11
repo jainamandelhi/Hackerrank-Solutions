@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,k,max=0;
+    cin>>n>>k;
+    vector<int>arr(k);
+    for(int i=0;i<k;i++)
+        cin>>arr[i];
+    for(int i=0;i<n;i++)
+    {
+        int min=n;
+        for(int j=0;j<k;j++)
+        {
+            int h=abs(arr[j]-i);
+               if(h<min)
+               {
+                   min=h;
+               }
+        }
+        if(min>max)
+            max=min;
+    }
+    cout<<max;
+}
