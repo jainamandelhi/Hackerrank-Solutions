@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+  void  getRecord(vector < int > s,int n){
+    int max=0,min=0,cmax=s[0],cmin=s[0];
+    for(int i=1;i<n;i++)
+    {
+        if(s[i]>cmax)
+        {
+            cmax=s[i];
+            max++;
+        }
+        else if(s[i]<cmin)
+        {
+            cmin=s[i];
+            min++;
+        }
+    }
+  cout<<max<<" "<<min;
+    // Complete this function
+}
+
+int main() {
+    int n,result;
+    cin >> n;
+    vector<int> s(n);
+    for(int s_i = 0; s_i < n; s_i++){
+       cin >> s[s_i];
+    }
+      getRecord(s,n);
+    
+    }
