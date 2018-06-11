@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+       int p,d,m,s,sum=0;
+    cin>>p>>d>>m>>s;
+    while(s-m>=0)
+    {
+        if(p>m&&s<p)
+            break;
+        if(p>m)
+        {
+            s=s-p;
+            p=p-d;
+            sum++;
+        }
+        else
+        {
+            s=s-m;
+            sum++;
+        }
+    }
+    cout<<sum;
+
+    return 0;
+}
