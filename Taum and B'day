@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    unsigned long long int t,b,w,bc,wc,z;
+    cin>>t;
+    vector<unsigned long long int>arr(t);
+    for(int i=0;i<t;i++)
+    {
+        long long int c=0;
+        cin>>b>>w>>bc>>wc>>z;
+        if(z+bc<wc)
+        {
+            c=bc*b+(z+bc)*w;
+        }
+        else if(z+wc<bc)
+            c=wc*w+(z+wc)*b;
+        else
+            c=w*wc+b*bc;
+        arr[i]=c;
+    }
+     for(int i=0;i<t;i++)
+         cout<<arr[i]<<endl;
+}
