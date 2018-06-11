@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int x,d,sum=0;
+    cin>>x>>d;
+    vector<int>arr(x);
+    bool h[21001]={0};
+    for(int i=0;i<x;i++){
+        cin>>arr[i];
+        h[arr[i]]=true;}
+    for(int i=0;i<x;i++)
+        {
+            if(h[arr[i]+d]&&h[arr[i]+d+d])
+                sum++;
+        }
+    
+    cout<<sum;
+}
+    
