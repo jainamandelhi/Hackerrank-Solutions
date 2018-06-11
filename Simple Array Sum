@@ -20,6 +20,6 @@ int main() {
        cin >> ar[ar_i];
     }
     int result = simpleArraySum(n, ar);
-    cout << result << endl;
+    cout << result <<endl;
     return 0;
 }
