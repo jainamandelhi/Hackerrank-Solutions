@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int n,l=2,a=2;
+    cin>>n;
+    while (n>1)
+    {
+        l=(l*3)/2;
+        a=a+l;
+        n--;
+    }
+    cout<<a;
+}
