@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the findDigits function below.
+
+
+int main()
+{
+    int t,j,sum=0;
+    cin >> t;
+    for (int t_itr = 0; t_itr < t; t_itr++) {
+        int n;
+        cin >> n;
+        j=n;
+       while(j>0)
+       {
+           if(j%10!=0&&n%(j%10)==0)
+               sum++;
+           j=j/10;
+       }
+        cout<<sum<<endl;
+        sum=0;
+    }
+
+
+    return 0;
+}
