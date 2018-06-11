@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int N;
+    cin >> N;
+    vector<int> B(N);
+
+    for (int i = 0; i < N; i++) {
+        cin>>B[i];
+    }
+     int n=B.size(),total=0;
+    for(int i=0;i<n;i++)
+    {
+        if(B[i]%2!=0)
+        {
+            total++;
+        }
+    }
+    if(total%2!=0)
+    {
+        cout<<"NO";
+        exit(0);
+    }
+    total=0;
+    int i=0;
+    for(int i=0;i<n-1;i++)
+    {
+        if (B[i]%2!=0)
+        {
+            total+=2;
+            B[i]++;
+            B[i+1]++;
+        }
+    }
+    cout<<total;
+    return 0;
+}
+
