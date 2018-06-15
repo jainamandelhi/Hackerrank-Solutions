@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+void multiply(int res[], int x);
+void factorial(int n)
+{
+	int res[200];
+	for(int i=0; i<200; i++)
+	{
+		res[i]=0;
+	}
+	res[199]=1;
+	for(int x=2; x<=n; x++)
+	{
+		multiply(res, x);
+	}
+    int k=0;
+    for( int i=0; i<200; i++)
+    {
+        if(res[i]!=0){
+            k=i;
+            break;}
+    }
+	for( int i=k; i<200; i++)
+	{
+		cout<<res[i];
+	}
+}
+void multiply(int res[], int x)
+{
+	int carry=0;
+	for( int i=199; i>=0; i--)
+	{
+		int prod= res[i] * x +carry;
+		res[i]= prod %10;
+		carry= prod/10;
+	}
+}
+int main()
+{
+    int n;
+    cin>>n;
+	factorial(n);
+    return 0;
+}
