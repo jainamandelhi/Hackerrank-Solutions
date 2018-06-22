@@ -1,0 +1,46 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <map>
+#include <algorithm>
+using namespace std;
+
+inline
+void use_io_optimizations()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+}
+    
+int main() {
+    use_io_optimizations();
+    map<string,unsigned int>marks;
+    unsigned int t;
+    cin>>t;
+    for(unsigned int i=0;i<t;i++)
+    {
+        unsigned int cases;
+        string student;
+        cin>>cases>>student;
+        if(cases==1)
+        {
+            int score;
+            cin>>score;
+            marks[student]+=score;
+        }
+        if(cases==2)
+        {
+            marks[student]=0;
+        }
+        if(cases==3)
+        {
+            cout<<marks[student]<<endl;
+        }
+    }
+    return 0;
+}
+
+
+
