@@ -1,0 +1,10 @@
+vector<int> findPoint(int px, int py, int qx, int qy) {
+    vector<int>arr;
+    arr.push_back(qx-px+qx);
+    arr.push_back(qy-py+qy);
+    return arr;
+    /*
+     * Write your code here.
+     */
+
+}
