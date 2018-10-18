@@ -1,0 +1,12 @@
+def gcd(x: Int, y: Int): Int =
+   {
+       if(x==y)
+        return x;
+       else if(x>y)
+        return gcd(x-y,y);
+       else
+        return gcd(x,y-x);
+		// You only need to fill up this function
+        // To return the value of the GCD of x and y
+
+   }
